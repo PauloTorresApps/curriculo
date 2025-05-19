@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo Roberto Torres - Currículo</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #334155;
+            --light-text: #64748b;
+            --background: #ffffff;
+            --light-background: #f8fafc;
+            --border-color: #e2e8f0;
+            --accent: #3b82f6;
+        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    body {
+        background-color: var(--background);
+        color: var(--text-color);
+        line-height: 1.6;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: var(--background);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 40px;
+        position: relative;
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .name {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+        letter-spacing: -0.5px;
+    }
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        font-size: 0.95rem;
+    }
+    
+    .contact a {
+        color: white;
+        text-decoration: none;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .contact a:hover {
+        text-decoration: underline;
+    }
+    
+    .contact a span {
+        margin-left: 5px;
+    }
+    
+    main {
+        padding: 30px 40px;
+    }
+    
+    section {
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+    
+    .profile {
+        background-color: var(--light-background);
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .skill {
+        background-color: var(--accent);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    
+    .experience-item {
+        margin-bottom: 25px;
+        position: relative;
+        padding-left: 20px;
+    }
+    
+    .experience-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+    }
+    
+    .job-title {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--text-color);
+        margin-bottom: 5px;
+    }
+    
+    .company {
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+    }
+    
+    .period {
+        color: var(--light-text);
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .job-details {
+        margin-bottom: 10px;
+        color: var(--light-text);
+        font-size: 0.95rem;
+    }
+    
+    ul {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    
+    li {
+        margin-bottom: 5px;
+    }
+    
+    .education-item {
+        margin-bottom: 20px;
+    }
+    
+    .degree {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    
+    .institution {
+        color: var(--primary-color);
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    
+    .languages {
+        display: flex;
+        gap: 30px;
+    }
+    
+    .language {
+        background-color: var(--light-background);
+        padding: 15px;
+        border-radius: 8px;
+        flex: 1;
+    }
+    
+    .language h3 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .language-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .language-skill {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+    
+    .language-skill span:first-child {
+        font-weight: 500;
+        margin-right: 5px;
+    }
+    
+    .language-skill span:last-child {
+        color: var(--light-text);
+    }
+    
+    footer {
+        background-color: var(--light-background);
+        padding: 20px 40px;
+        text-align: center;
+        color: var(--light-text);
+        font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+            align-items: center;
+        }
+        
+        .contact a {
+            justify-content: center;
+        }
+        
+        .languages {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1 class="name">Paulo Roberto Torres</h1>
+                    <p>Desenvolvedor Web Especialista</p>
+                </div>
+                <div class="contact">
+                    <a href="tel:+5563984425473">(63) 9 8442-5473</a>
+                    <a href="mailto:paulo.torres.apps@gmail.com">paulo.torres.apps@gmail.com</a>
+                    <a href="https://github.com/nepanuceno" target="_blank">github.com/nepanuceno</a>
+                    <p>Nacionalidade: Brasileira</p>
+                    <p>Atualizado em: 19 de maio de 2025</p>
+                </div>
+            </div>
+        </header>
+    <main>
+        <div class="profile">
+            <p>Desenvolvedor Web com especialização em Telemática e graduação em Ciência da Computação, possuindo vasta experiência em desenvolvimento de sistemas utilizando PHP, JavaScript, e diversas tecnologias web. Atualmente focado no desenvolvimento e integração de sistemas de processos judiciais eletrônicos, com dedicação constante ao aprimoramento de práticas como S.O.L.I.D, Clean Code, Clean Architecture e DDD. Iniciando estudos em tecnologias para captura e apresentação de Telemetria.</p>
+        </div>
+        
+        <section>
+            <h2>COMPETÊNCIAS TÉCNICAS</h2>
+            <div class="skills">
+                <span class="skill">PHP</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">SOAP</span>
+                <span class="skill">CSS</span>
+                <span class="skill">Laravel</span>
+                <span class="skill">JQuery</span>
+                <span class="skill">Linux</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Git</span>
+                <span class="skill">GitLab</span>
+                <span class="skill">SOLID</span>
+                <span class="skill">Tailwind</span>
+                <span class="skill">Scrum</span>
+                <span class="skill">MySQL</span>
+                <span class="skill">REST</span>
+                <span class="skill">JSON</span>
+                <span class="skill">Bootstrap</span>
+                <span class="skill">SASS</span>
+                <span class="skill">Twig</span>
+                <span class="skill">Zend Framework</span>
+            </div>
+        </section>
+        
+        <section>
+            <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+            
+            <div class="experience-item">
+                <div class="company">Ministério Público do Estado do Tocantins (MPE-TO)</div>
+                <div class="job-title">Desenvolvedor (Cedido do Executivo Estadual)</div>
+                <div class="period">2023 - Atual | Dedicação exclusiva (35h semanais)</div>
+                <div class="job-details">
+                    <p>Principais atividades:</p>
+                    <ul>
+                        <li>Desenvolvimento e manutenção do Sistema de Processo Eletrônico da Justiça Federal da 4ª Região (EPROC) - PHP 8.x, Twig, BootstrapCSS e JavaScript ECMA 6</li>
+                        <li>Desenvolvimento de API EPROC para intercomunicação com o Sistema Integrare</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Basis Tecnologia</div>
+                <div class="job-title">Programador PHP Pleno</div>
+                <div class="period">2022 - 2023 | CLT (40h semanais)</div>
+                <div class="job-details">
+                    <p>Principais atividades:</p>
+                    <ul>
+                        <li>Desenvolvimento Full Stack com PHP 7.1 + Zend Framework 1, JavaScript, jQuery, CSS</li>
+                        <li>Desenvolvimento com PHP 8.2 + Laravel 10 e Banco de Dados Oracle</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Ministério Público do Estado do Tocantins (MPE-TO)</div>
+                <div class="job-title">Servidor Público Concursado</div>
+                <div class="period">2018 - 2022 | Dedicação exclusiva (35h semanais)</div>
+                <div class="job-details">
+                    <p>Principais atividades:</p>
+                    <ul>
+                        <li>Desenvolvimento e manutenção de sistemas ERP (Athenas) - Python 3 e ExtJs</li>
+                        <li>Desenvolvimento do Portal de Informações do MPETO - Python 3</li>
+                        <li>Desenvolvimento do Sistema de Processo Eletrônico (EPROC) - PHP 7.x, Twig, BootstrapCSS e JavaScript ECMA 6</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Secretaria da Segurança Pública do Estado do Tocantins (SSP-TO)</div>
+                <div class="job-title">Servidor Público Concursado</div>
+                <div class="period">2015 - 2018 | Dedicação exclusiva (35h semanais)</div>
+                <div class="job-details">
+                    <p>Principais atividades:</p>
+                    <ul>
+                        <li>Desenvolvimento de Software Web com PHP + Laravel e Banco de Dados Oracle</li>
+                        <li>Ambiente de desenvolvimento Linux Ubuntu</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Secretaria da Juventude e dos Esportes (SEJUVES)</div>
+                <div class="job-title">Chefe da Assessoria de Tecnologia da Informação</div>
+                <div class="period">2011 - 2015 | Dedicação exclusiva (40h semanais)</div>
+                <div class="job-details">
+                    <p>Principais atividades:</p>
+                    <ul>
+                        <li>Gestão do departamento de Tecnologia da Informação</li>
+                        <li>Gerência e fiscalização de processos de aquisição de bens e serviços</li>
+                        <li>Desenvolvimento de sistemas Web em PHP + MySQL + JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Junta Comercial do Estado do Tocantins (JUCETINS)</div>
+                <div class="job-title">Técnico em Informática</div>
+                <div class="period">2005 - 2011 | Dedicação exclusiva (40h semanais)</div>
+                <div class="job-details">
+                    <p>Principais atividades:</p>
+                    <ul>
+                        <li>Desenvolvimento Web utilizando PHP + MySQL + JavaScript</li>
+                        <li>Manutenção e suporte de computadores</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>FORMAÇÃO ACADÊMICA</h2>
+            
+            <div class="education-item">
+                <div class="degree">Especialização em Telemática</div>
+                <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Tocantins (IFTO)</div>
+                <div class="period">2015 - 2016 | Carga Horária: 400h</div>
+                <div class="job-details">
+                    <p>Trabalho de Conclusão: "A Feasible Solution for Network Selection Problem"</p>
+                    <p>Orientador: Cláudio de Castro Monteiro</p>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree">Graduação em Ciência da Computação</div>
+                <div class="institution">Universidade Federal do Tocantins (UFT)</div>
+                <div class="period">2005 - 2013</div>
+                <div class="job-details">
+                    <p>Trabalho de Conclusão: "Sistema de Reconhecimento de Padrões de Nódulos Cancerígenos a partir de Radiografias Pulmonares"</p>
+                    <p>Orientador: Eduardo Ferreira Ribeiro</p>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree">Curso Técnico em Informática</div>
+                <div class="institution">Instituto Federal do Tocantins Campus Palmas (IFTO)</div>
+                <div class="period">2003 - 2004</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>IDIOMAS</h2>
+            <div class="languages">
+                <div class="language">
+                    <h3>Inglês</h3>
+                    <div class="language-skills">
+                        <div class="language-skill"><span>Compreensão:</span> <span>Razoável</span></div>
+                        <div class="language-skill"><span>Fala:</span> <span>Básico</span></div>
+                        <div class="language-skill"><span>Leitura:</span> <span>Razoável</span></div>
+                        <div class="language-skill"><span>Escrita:</span> <span>Básico</span></div>
+                    </div>
+                </div>
+                
+                <div class="language">
+                    <h3>Espanhol</h3>
+                    <div class="language-skills">
+                        <div class="language-skill"><span>Compreensão:</span> <span>Razoável</span></div>
+                        <div class="language-skill"><span>Fala:</span> <span>Básico</span></div>
+                        <div class="language-skill"><span>Leitura:</span> <span>Razoável</span></div>
+                        <div class="language-skill"><span>Escrita:</span> <span>Básico</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Currículo atualizado em 19 de maio de 2025</p>
+    </footer>
+</div>
+</body>
+</html>
